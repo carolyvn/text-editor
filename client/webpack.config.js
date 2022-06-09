@@ -18,13 +18,12 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Webpack plugin that generates our html file and injects our bundles
+      // Webpack plugin that generates the html file and injects the bundles
       new HtmlWebpackPlugin({
-        template: './index/html',
-        title: 'JATE'
+        template: './index.html',    
       }),
 
-      // Injects our custome service worker
+      // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
@@ -34,9 +33,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Text Editor',
+        name: 'JATE',
         short_name: 'JATE',
-        description: 'Another Text Editor!',
+        description: 'Just Another Text Editor',
         backgroundcolor: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
@@ -45,32 +44,32 @@ module.exports = () => {
           {
             src: path.resolve('src/images.logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
+            destination: path.join('assests', 'icons'),
           }
         ]
       })
+      
     ],
 
     module: {
       rules: [
+        // CSS loaders
         {
-          // CSS loader
           test: /\.css$/i,
-          use: ['style-loader', 'css-loader']
+          use: ['style-loader', 'css-loader'],
         },
+        // Babel loader
         {
-          // Babel loader
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
-            }
-          }
-        }
-        
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform=runtime'],
+            },
+          },
+        },
       ],
     },
   };
