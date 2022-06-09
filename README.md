@@ -3,6 +3,13 @@
 ## Description
 Build a text editor that runs in the browser. It is a single-page application that meets the PWA criteria. Additionally, it features a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. And the app could be download and use offline.
 
+## Table of Contents
+ - [Description](#description)
+ - [Installation](#installation)
+ - [Usage](#usage)
+ - [Demo](#demo)
+ - [Questions](#questions)
+
 ## Installation
  - Clone the repo to the local machine
  - Install all necessary dependencies with `npm install`
@@ -13,6 +20,9 @@ It will stores and retrieves data.
 
 ## Deployed Link
 [Link to deployed application](https://text-editory.herokuapp.com/)
+
+## Demo
+![J A T E](https://user-images.githubusercontent.com/90424035/172957242-6464e8b3-febc-447c-802d-56d57b05c733.gif)
 
 ## User Story
     AS A developer
@@ -45,5 +55,11 @@ It will stores and retrieves data.
     THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
     WHEN I deploy to Heroku
     THEN I should have proper build scripts for a webpack application
+
+ ## Questions
+ If you have any questions, please contact me at: 
+ - GitHub: [@carolyvn](https://github.com/carolyvn)
+ - Email: [@email me](dreamfx@hotmail.com)
+
 
 
